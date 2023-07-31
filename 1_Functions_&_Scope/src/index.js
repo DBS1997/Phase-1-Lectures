@@ -74,25 +74,114 @@ const inventory = [
 
 // Function Declaration!
 
+function firstFunction () {
+    console.log("We are in a function")
+}
+
+firstFunction()
+
+function secondFunction (data){
+    console.log(data)
+}
+
+
 // Now lets call the function
 
 // Lets make a function with a parameter
+
+function addNumbers(num1, num2){
+    return num1+num2
+}
+
+const nums= addNumbers(7, 90)
+
+console.log(nums)
+
 // Using the data above what sort of function can we create?
 
 // Anonomous Functions? Another way to write functions!
+
+console.log(
+    function(){
+        return "Anonymous"
+    }()
+)
+
 // Whats the difference? It comes down to where it is called
 
 
 // Arrow Functions
+
+const arrowFunc = ()=>{
+    console.log("hello arrow")
+}
+
+arrowFunc()
+
 // Arrow functions vs regular functions vs anonomous functions????
+
+    // Arrow functions are treated like variables and need to be defined before they are defined
+    // the benefit is that it doesn't use as much memory for the computer
+    // stylistic thing for most parts
 // Lets refactor the regular function above to be an arrow function!
 
 // Now you try it!
 
 // Scoping
+    // anything defined outside of a function is on a global scope
+    // that means you have access to it anywhere
+    // for memory use best to define in the most narrow scope possible
 // Global Scope
 // Function Scope
+    // move things from a function scope to global scope by returning it and then setting a var = to it
 // Block Scope (If, else, for, while)
+
+const ifStatement = true
+
+if(ifStatement && 1===0){
+    console.log("We're in IF!")
+}else if (false){
+    console.log("were in ELSEIF")
+}
+else{
+    console.log("We're in ELSE!")
+}
+
+if(ifStatement || 1===0){
+    console.log("We're in IF!")
+}else{
+    console.log("We're in ELSE!")
+}
+
+
+//whileif
+
+let condition = 10
+while(condition > 0){
+    console.log (condition)
+    condition -= 1
+}
+
+
+//for loop
+
+for(let i=0; i<10; i++){
+    console.log(`count up with a for loop up to ${i}`)
+}
+
+//can use this to loop through arrays
+
+const exampleArray =["string", 2, 5, true]
+
+inventory.map(exampleArray)
+
+//objects
+// 2 ways to access, dot notation or bracket notation 
+// using brackets tells JS to interpret whats in the brackets, dot only if you know exactly what you're looking for
+
 
 // Callback Functions, calling a function in a function
 
+function outerFunction(innerFunction){
+    console.log("outer function")
+    innerFunction()}
